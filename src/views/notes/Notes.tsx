@@ -7,6 +7,9 @@ import { Note } from '../../types';
 
 const Notes = () => {
   const [notes, setNotes] = useState<Note[]>([]);
+  const [inputText, setInputText] = useState<string>('');
+  const [editId, setEditId] = useState<string | null>(null);
+
   // Fetch Notes
   const fetchNotes = async () => {
     try {
@@ -55,8 +58,8 @@ const Notes = () => {
     <div className="note-section">
       <div className="body">
       <h1>Notes</h1>
-      <NoteForm addNote={addNote} />
-      <NotesList notes={notes} deleteNote={deleteNote} updateNote={updateNote}/>
+      <NoteForm addNote={addNote} editId={editId} setEditId={setEditId} inputText={inputText} updateNote={updateNote}/>
+      <NotesList notes={notes} deleteNote={deleteNote} updateNote={updateNote} setEditId={setEditId} setInputText={setInputText}/>
       </div>
     </div>
   );

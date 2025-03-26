@@ -25,24 +25,25 @@
   display: flex;
   justify-content: center;
   & .body{
-    min-width: 400px;
+    min-width: 600px;
   }
   & .add-note{
     height: 35px;
     background-color: #00dbe3;
     color: white;
     border: none;
-    width: 80px;
+    min-width: 80px;
     border-radius: 6px;
     cursor: pointer;
   }
   & .delete-note{
     height: 28px;
-    background-color: rgba(233, 0, 0, 0.5);
-    color: white;
+    color: rgba(233, 0, 0, 0.5);
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    background: none;
+    font-size: 16px;
   }
   & .update-note{
     height: 35px;
@@ -55,15 +56,48 @@
   }
   & .edit-note{
     height: 28px;
-    background-color:darkgoldenrod;
-    color: white;
+    color: #00dbe3;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    background: none;
+    font-size: 16px;
   }
   & .update-input{
     width: 70%;
     padding: 8px;
     margin-right: 10px;
   }
+
+  .note-container {
+    margin: 20px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .note-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .note-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
 }
