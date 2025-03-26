@@ -40,6 +40,7 @@ const NoteForm: React.FC<NoteFormProps> = ({ addNote,updateNote, setEditId,editI
         placeholder="Write a note..."
         value={text}
         onChange={(e) => setText(e.target.value)}
+        maxLength={30}
       />
       <button className="add-note" type="submit">
         {editId ? "Update" : "Add"} Note

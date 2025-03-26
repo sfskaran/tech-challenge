@@ -36,7 +36,7 @@ const NoteList: React.FC<NoteListProps> = ({
             <>
               <div style={{width:"250px",textAlign:"start"}}>{note.text}</div>
               <div className="note-date" style={{ width:"185px",textAlign:"start" }}>
-                {new Date(note.createdAt).toLocaleString()}
+                {new Date(note.createdAt).toLocaleString(undefined, { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'short', day: 'numeric' })}
               </div>
               <div style={{width:"125px",textAlign:"start"}}>
                 <button className="edit-note" onClick={() => handleEdit(note)}>
