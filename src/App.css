@@ -2,3 +2,68 @@
   text-align: center;
   background-color: #f2f5f5;
 }
+
+.note-form input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.note-section{
+  display: flex;
+  justify-content: center;
+  & .body{
+    min-width: 400px;
+  }
+  & .add-note{
+    height: 35px;
+    background-color: #00dbe3;
+    color: white;
+    border: none;
+    width: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  & .delete-note{
+    height: 28px;
+    background-color: rgba(233, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  & .update-note{
+    height: 35px;
+    background-color: #00dbe3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 80px;
+    cursor: pointer;
+  }
+  & .edit-note{
+    height: 28px;
+    background-color:darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  & .update-input{
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+  }
+}

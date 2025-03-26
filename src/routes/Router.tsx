@@ -4,6 +4,7 @@ import Loadable from "../components/loadable/Loadable";
 
 const Layout = Loadable(lazy(() => import("../components/layout/Layout")));
 const Dashboard = Loadable(lazy(() => import("../views/dashboard/Dashboard")));
+const Notes = Loadable(lazy(() => import("../views/notes/Notes")));
 const Sell = Loadable(lazy(() => import("../views/sell/Sell")));
 const Login = Loadable(lazy(() => import("../views/login/Login")));
 const Notfound = Loadable(
@@ -17,6 +18,7 @@ const Router = [
     children: [
       { path: "/", element: <Navigate to="/dashboard" /> },
       { path: "/dashboard", exact: true, element: <Dashboard /> },
+      { path: "/notes", exact: true, element: <Notes /> },
       { path: "/sell", exact: true, element: <Sell /> },
       { path: "/login", exact: true, element: <Login /> },
       { path: "/auth/404", exact: true, element: <Notfound /> },
